@@ -71,13 +71,10 @@
 
         console.log(newReservation);
 
-<<<<<<< HEAD
-
-=======
         $.post('/tables', newReservation)
             .done(console.log)
             .fail(console.error)
->>>>>>> 0a165b9257775e57e0ef5e89ada1f26aba58c9b8
+
 
         // This line is the magic. It's very similar to the standard ajax function we used.
         // Essentially we give it a URL, we give it the object we want to send, then we have a "callback".
