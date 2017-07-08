@@ -35,6 +35,8 @@ app.use(bodyParser.json({
   type: "application/vnd.api+json"
 }));
 
+app.use(express.static('public'));
+
 //Set up data, users, waitlist
 // =============================================================
 var customers = [];
@@ -83,6 +85,6 @@ app.listen(PORT, function(err) {
 	if (err) {
 		return.console.error(err)
 	}
-	
+
   console.log("App listening on PORT " + PORT);
 });
