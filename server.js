@@ -57,13 +57,25 @@ app.get("/reserve", function(req, res) {
   res.sendFile(path.join(__dirname, "reserve.html"));
 });
 
-app.get("/api/tables", function(req, res) {
-  res.sendFile(path.join(__dirname, "reserve.html"));
+app.get('/api/:endpoint?', function (req, res) {
+  switch (req.params.endpoint) {
+    case 'tables':
+      return res.json(customers);
+      break
+    case 'waitlist':
+      return res.json(waitlist);
+      break
+    default:
+      res.send(404, 'Not found');
+      break
+  }
 });
 
-app.get("/api/waitlist", function(req, res) {
-  res.sendFile(path.join(__dirname, "reserve.html"));
-});
+// Takes in JSON input for customers and waitlist
+// =============================================================
+app.post("/api/new", function(req, res){
+	var 
+})
 
 // Starts the server to begin listening
 // =============================================================
