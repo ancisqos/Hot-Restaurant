@@ -6,35 +6,44 @@
     <title>Reserve a table</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./style.css">
 </head>
 
 <body>
 
 <div class="container">
     <div class="jumbotron">
-        <h1>Hot Restaurant</h1>
-        <p>Current Reservations and Waiting List</p>
-        <p><a id="tablesBtn" class="btn btn-primary btn-lg" href="tables.html" role="button">View Tables</a></p>
-        <p><a id="homeBtn" class="btn btn-primary btn-lg" href="index.html" role="button">Home</a></p>
+        <h1 class="text-center">Hot Restaurant</h1>
+        <p class="text-center">Current Reservations and Waiting List</p>
+        <div class="text-center">
+        <a href="/tables.html">
+                    <button type="button" class="btn btn-lg btn-primary">
+                        <span class="glyphicon glyphicon-list-alt"></span>View Tables</button>
+                </a>
+                <a href="/">
+                    <button type="button" class="btn btn-lg btn-default"><span class="glyphicon glyphicon-home"></span>
+                    </button>
+                </a>
+        </div>
     </div>
     <div class="panel panel-default">
         <div class="panel-heading">Table Reservation</div>
         <div class="panel-body">
             <label for="basic-url">Name</label>
             <div class="input-group">
-                <input id="nameInput" type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+                <input id="nameInput" type="text" class="form-control" aria-describedby="basic-addon3">
             </div>
             <label for="basic-url">Phone Number</label>
             <div class="input-group">
-                <input id="numberInput" type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+                <input id="numberInput" type="text" class="form-control"  aria-describedby="basic-addon3">
             </div>
             <label for="basic-url">Email</label>
             <div class="input-group">
-                <input id="emailInput" type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+                <input id="emailInput" type="text" class="form-control" aria-describedby="basic-addon3">
             </div>
             <label for="basic-url">Unique ID</label>
             <div class="input-group">
-                <input id="idInput" type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+                <input id="idInput" type="text" class="form-control" aria-describedby="basic-addon3">
             </div>
             <input id="submitBtn" class="btn btn-default" type="submit" value="Submit">
         </div>
