@@ -75,10 +75,14 @@ app.get('/api/:endpoint?', function (req, res) {
 
 // Takes in JSON input for customers and waitlist
 // =============================================================
-// app.post("/api/new", function(req, res){
-// 	var 
-// })
+//fires when user sends post request
+app.post('/tables', function (req, res) {
+  const table = req.body;
 
+  customers.push(table);
+
+  res.json(table);
+})
 // Starts the server to begin listening
 // =============================================================
 app.listen(PORT, function(err) {
