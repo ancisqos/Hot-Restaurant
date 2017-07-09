@@ -22,7 +22,7 @@
             <div class="text-center">
                 <a href="/tables">
                     <button type="button" class="btn btn-lg btn-primary">
-                        <span class="glyphicon glyphicon-list-alt"></span>View Tables</button>
+                        <span class="glyphicon glyphicon-list-alt"></span> View Tables</button>
                 </a>
                 <a href="/">
                     <button type="button" class="btn btn-lg btn-default"><span class="glyphicon glyphicon-home"></span>
@@ -74,6 +74,7 @@
         $.post('/tables', newReservation)
             .done(console.log)
             .fail(console.error)
+
 
         // This line is the magic. It's very similar to the standard ajax function we used.
         // Essentially we give it a URL, we give it the object we want to send, then we have a "callback".
