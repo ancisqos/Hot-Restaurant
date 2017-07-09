@@ -77,11 +77,19 @@ app.get('/api/:endpoint?', function (req, res) {
 // =============================================================
 //fires when user sends post request
 app.post('/tables', function (req, res) {
-  const table = req.body;
+  if(customers.length < 5) {
+    customers.push(req.body);
+    res.json(true);
+  } else {
+    waitlist.push(req.body);
+    res.json(false);
+  }
 
-  customers.push(table);
+  // const table = req.body;
 
-  res.json(table);
+  // customers.push(table);
+
+  // res.json(table);
 })
 // Starts the server to begin listening
 // =============================================================
